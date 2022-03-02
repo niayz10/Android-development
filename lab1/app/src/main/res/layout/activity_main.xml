@@ -1,51 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="300dp"
+
+        >
 
         <TextView
-            android:id="@+id/text1"
+            android:id="@+id/Summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="50dp"
             android:text="@string/_16_x_0_5"
             android:textColor="@color/black"
-            android:textSize="80sp" />
+            android:textSize="80sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.308" />
 
         <TextView
+            android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text1"
-            android:layout_marginStart="340dp"
-            android:layout_marginTop="30dp"
+            android:layout_below="@id/Summary"
+            android:layout_marginTop="72dp"
             android:text="@string/_8"
-            android:textSize="55sp" />
+            android:textSize="55sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Summary" />
 
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
+        android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
-        android:background="@color/material_dynamic_neutral95">
+        android:layout_weight="1"
+        android:background="#EAE8E8"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
 
             <Button
+                android:id="@+id/button_7"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,6 +70,7 @@
                 android:textSize="32sp" />
 
             <Button
+                android:id="@+id/button_4"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,6 +80,7 @@
                 android:textSize="32sp" />
 
             <Button
+                android:id="@+id/button_1"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,6 +90,7 @@
                 android:textSize="32sp" />
 
             <Button
+                android:id="@+id/button_0"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,6 +109,7 @@
             >
 
             <Button
+                android:id="@+id/button_8"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,6 +129,7 @@
                 android:textSize="32sp" />
 
             <Button
+                android:id="@+id/button_2"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,7 +139,7 @@
                 android:textSize="32sp" />
 
             <Button
-                android:id="@+id/button_0"
+                android:id="@+id/button_dot"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -137,6 +157,7 @@
             android:layout_weight="8">
 
             <Button
+                android:id="@+id/button_9"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -146,6 +167,7 @@
                 android:textSize="32sp" />
 
             <Button
+                android:id="@+id/button_6"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -155,6 +177,7 @@
                 android:textSize="32sp" />
 
             <Button
+                android:id="@+id/button_3"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -164,15 +187,22 @@
                 android:textSize="32sp" />
 
             <Button
+                android:id="@+id/button_egual"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/equal"
                 android:textColor="@color/black"
-                android:textSize="32sp" />
+                android:textSize="32sp"
+                android:onClick="onResult"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#DAD8D8"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -181,48 +211,59 @@
             android:layout_weight="8">
 
             <Button
+                android:id="@+id/button_back"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@android:string/cancel"
                 app:icon="@android:drawable/ic_input_delete"
-                app:iconTint="#31BFFF" />
+                app:iconTint="#31BFFF"
+                android:onClick="onErase"/>
 
             <Button
+                android:id="@+id/button_div"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/delete"
                 android:textColor="#31BFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="onAction"/>
 
             <Button
+                android:id="@+id/button_mult"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="24sp"
                android:text="@string/multiply"
-                android:textColor="#31BFFF"/>
+                android:textColor="#31BFFF"
+                android:onClick="onAction"/>
 
             <Button
+                android:id="@+id/button_minus"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/minus"
                 android:textColor="#31BFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="onAction"/>
 
             <Button
+                android:id="@+id/button_plus"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/plus"
                 android:textColor="#31BFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:onClick="onAction"/>
 
         </LinearLayout>
 
