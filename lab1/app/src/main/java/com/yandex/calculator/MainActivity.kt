@@ -88,6 +88,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 current += "9"
             }
             R.id.button_dot -> {
+
                 if (!isFloat)
                 {
                     current += if(current.isNotEmpty()) {
